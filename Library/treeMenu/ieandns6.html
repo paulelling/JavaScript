@@ -1,0 +1,72 @@
+<HTML>
+<HEAD><TITLE>Tree Menu (IE and Netscape 6.0+)</TITLE>
+
+
+<STYLE>
+SPAN {cursor: default;}
+.onNS {position:absolute; visibility:visible}
+.offNS {position:absolute; visibility:hide}
+.on {display: block;}
+.off {display: none;}
+</STYLE>
+
+
+
+
+<!------------ Tree menu functionality ------->
+<SCRIPT LANGUAGE="JavaScript" SRC="includes/ieandns6.js"></SCRIPT>
+
+</HEAD>
+<BODY>
+
+	<!-- Top level node -->
+	<IMG SRC="images/ftv2folderopen.gif" ALIGN="texttop">
+	Site map 
+	<BR>
+
+	<!-- First parent node -->
+	<IMG ID="node1" SRC="images/ftv2pnode.gif" BORDER=0
+	onClick=show("child1","node1","icon1") ALIGN="texttop">
+	<IMG ID=icon1 SRC="images/ftv2folderclosed.gif" BORDER=0 ALIGN="texttop">
+	Option 1
+	<BR>
+	<!-- First children nodes -->
+	<DIV ID=child1 class=off>
+	<IMG ID="vert1" SRC="images/ftv2vertline.gif" BORDER=0 ALIGN="texttop">
+	<IMG ID="node1a" SRC="images/ftv2lastnode.gif" BORDER=0 ALIGN="texttop">
+	<IMG ID="icon1a" SRC="images/ftv2link.gif" BORDER=0 ALIGN="texttop">
+	Option 1a
+	</DIV>
+	
+	<!-- Second parent node -->
+	<IMG ID="node2" SRC="images/ftv2pnode.gif" BORDER=0 
+	onClick=show("child2","node2","icon2") ALIGN="texttop">
+	<IMG ID=icon2 SRC="images/ftv2folderclosed.gif" BORDER=0 ALIGN="texttop">
+	Option 2
+	<BR>
+	<!-- Second children nodes -->
+	<DIV ID=child2 class=off>
+	<IMG ID="vert2a" SRC="images/ftv2vertline.gif" BORDER=0 ALIGN="texttop">
+	<IMG ID="node2a" SRC="images/ftv2lastnode.gif" BORDER=0 ALIGN="texttop">
+	<IMG ID="icon2a" SRC="images/ftv2link.gif" BORDER=0 ALIGN="texttop">
+	Option 2a
+	</DIV>
+	
+	<!-- Last parent node -->
+	<IMG ID="nodeLast" SRC="images/ftv2plastnode.gif" BORDER=0 
+	onClick=showLast("childLast","nodeLast","iconLast") ALIGN="texttop">
+	<IMG ID=iconLast SRC="images/ftv2folderclosed.gif" BORDER=0 ALIGN="texttop">
+	Option Last
+	<BR>
+	<!-- Last children nodes -->
+	<DIV ID=childLast class=off>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<IMG ID="nodeLasta" SRC="images/ftv2lastnode.gif" BORDER=0 ALIGN="texttop">
+	<IMG ID="iconLasta" SRC="images/ftv2link.gif" BORDER=0 ALIGN="texttop">
+	Option Last a
+	</DIV>
+
+
+
+</BODY>
+</HTML>

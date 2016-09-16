@@ -1,0 +1,31 @@
+<SCRIPT LANGUAGE="JavaScript">
+var SpecialWord = "paul";
+var SpecialUrl = "http://pelling/paulelling";
+var SpecialLetter = 0;
+
+function getKey(keyStroke) 
+{
+  var isNetscape = (document.layers);
+
+  var eventChooser = (isNetscape) ? keyStroke.which : event.keyCode;
+  
+  var which = String.fromCharCode(eventChooser).toLowerCase();
+
+  if (which == SpecialWord.charAt(SpecialLetter)) 
+  {
+    SpecialLetter++;
+  
+    if (SpecialLetter == SpecialWord.length) 
+    {
+      window.location = SpecialUrl;
+    }  
+  }
+  else 
+  {
+    SpecialLetter = 0;
+  }  
+}
+
+document.onkeypress = getKey;
+
+</script>
